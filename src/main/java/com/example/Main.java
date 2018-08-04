@@ -55,6 +55,11 @@ public class Main {
     return "index";
   }
 
+  @RequestMapping("/pan")
+  String pan() {
+    return "{}";
+  }
+
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
