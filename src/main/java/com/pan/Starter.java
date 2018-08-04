@@ -44,6 +44,7 @@ public class Starter {
   @Autowired
   private DataSource dataSource;
 
+  //git push heroku master
   public static void main(String[] args) throws Exception {
     SpringApplication.run(Starter.class, args);
 
