@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example;
+package com.pan;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -25,7 +25,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -35,9 +34,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Map;
 
-@RestController
+@Controller
 @SpringBootApplication
-public class Main {
+public class Starter {
 
   @Value("${spring.datasource.url}")
   private String dbUrl;
@@ -46,18 +45,8 @@ public class Main {
   private DataSource dataSource;
 
   public static void main(String[] args) throws Exception {
-    SpringApplication.run(Main.class, args);
+    SpringApplication.run(Starter.class, args);
 
-  }
-
-  @RequestMapping("/")
-  String index() {
-    return "index";
-  }
-
-  @RequestMapping("/pan")
-  String pan() {
-    return "{}";
   }
 
   @RequestMapping("/db")
