@@ -1,1 +1,1 @@
-web: java -jar target/pan-1.0.jar
+web: java -jar target/pans-1.0.jar
